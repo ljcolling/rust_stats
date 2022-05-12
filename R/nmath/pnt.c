@@ -170,8 +170,8 @@ double pnt(double t, double df, double ncp, int lower_tail, int log_p)
     tnc += pnorm(- del, 0., 1., /*lower*/TRUE, /*log_p*/FALSE);
 
     lower_tail = lower_tail != negdel; /* xor */
-    if(tnc > 1 - 1e-10 && lower_tail)
-	ML_WARNING(ME_PRECISION, "pnt{final}");
+ //    if(tnc > 1 - 1e-10 && lower_tail)
+	// ML_WARNING(ME_PRECISION, "pnt{final}");
 
     return R_DT_val(fmin2((double)tnc, 1.) /* Precaution */);
 }
