@@ -946,9 +946,9 @@ pub fn tukey_quantile(p: f64, rr: f64, cc: f64, df: f64, lower_tail: bool, log_p
 ///
 /// If `give_log` is true, the natural logarithm of the value will be returned, with potentially
 /// higher numerical accuracy than calling `.ln()` on the result.
-pub fn wilcox_pdf(x: f64, m: f64, n: f64, give_log: bool) -> f64 {
-    unsafe { ffi::dwilcox(x, m, n, c_bool(give_log)) }
-}
+// pub fn wilcox_pdf(x: f64, m: f64, n: f64, give_log: bool) -> f64 {
+//     unsafe { ffi::dwilcox(x, m, n, c_bool(give_log)) }
+// }
 
 /// Evaluate the culmulative distribution function of the Wilcoxon rank-sum distribution.
 ///
@@ -959,9 +959,9 @@ pub fn wilcox_pdf(x: f64, m: f64, n: f64, give_log: bool) -> f64 {
 ///
 /// If `log_p` is true, the natural logarithm of the value will be returned, with potentially
 /// higher numerical accuracy than calling `.ln()` on the result.
-pub fn wilcox_cdf(x: f64, m: f64, n: f64, lower_tail: bool, log_p: bool) -> f64 {
-    unsafe { ffi::pwilcox(x, m, n, c_bool(lower_tail), c_bool(log_p)) }
-}
+// pub fn wilcox_cdf(x: f64, m: f64, n: f64, lower_tail: bool, log_p: bool) -> f64 {
+//     unsafe { ffi::pwilcox(x, m, n, c_bool(lower_tail), c_bool(log_p)) }
+// }
 
 /// Evaluate the quantile function of the Wilcoxon rank-sum distribution.
 ///
@@ -970,9 +970,9 @@ pub fn wilcox_cdf(x: f64, m: f64, n: f64, lower_tail: bool, log_p: bool) -> f64 
 ///
 /// If `log_p` is true, the natural logarithm of the value will be returned, with potentially
 /// higher numerical accuracy than calling `.ln()`.
-pub fn wilcox_quantile(p: f64, m: f64, n: f64, lower_tail: bool, log_p: bool) -> f64 {
-    unsafe { ffi::qwilcox(p, m, n, c_bool(lower_tail), c_bool(log_p)) }
-}
+// pub fn wilcox_quantile(p: f64, m: f64, n: f64, lower_tail: bool, log_p: bool) -> f64 {
+//     unsafe { ffi::qwilcox(p, m, n, c_bool(lower_tail), c_bool(log_p)) }
+// }
 
 // Wilcoxon signed rank distribution
 
@@ -980,9 +980,9 @@ pub fn wilcox_quantile(p: f64, m: f64, n: f64, lower_tail: bool, log_p: bool) ->
 ///
 /// If `give_log` is true, the natural logarithm of the value will be returned, with potentially
 /// higher numerical accuracy than calling `.ln()` on the result.
-pub fn signrank_pdf(x: f64, n: f64, give_log: bool) -> f64 {
-    unsafe { ffi::dsignrank(x, n, c_bool(give_log)) }
-}
+// pub fn signrank_pdf(x: f64, n: f64, give_log: bool) -> f64 {
+//     unsafe { ffi::dsignrank(x, n, c_bool(give_log)) }
+// }
 
 /// Evaluate the culmulative distribution function of the signrankon signed rank distribution.
 ///
@@ -993,9 +993,9 @@ pub fn signrank_pdf(x: f64, n: f64, give_log: bool) -> f64 {
 ///
 /// If `log_p` is true, the natural logarithm of the value will be returned, with potentially
 /// higher numerical accuracy than calling `.ln()` on the result.
-pub fn signrank_cdf(x: f64, n: f64, lower_tail: bool, log_p: bool) -> f64 {
-    unsafe { ffi::psignrank(x, n, c_bool(lower_tail), c_bool(log_p)) }
-}
+// pub fn signrank_cdf(x: f64, n: f64, lower_tail: bool, log_p: bool) -> f64 {
+//     unsafe { ffi::psignrank(x, n, c_bool(lower_tail), c_bool(log_p)) }
+// }
 
 /// Evaluate the quantile function of the signrankon signed rank distribution.
 ///
@@ -1004,9 +1004,9 @@ pub fn signrank_cdf(x: f64, n: f64, lower_tail: bool, log_p: bool) -> f64 {
 ///
 /// If `log_p` is true, the natural logarithm of the value will be returned, with potentially
 /// higher numerical accuracy than calling `.ln()`.
-pub fn signrank_quantile(p: f64, n: f64, lower_tail: bool, log_p: bool) -> f64 {
-    unsafe { ffi::qsignrank(p, n, c_bool(lower_tail), c_bool(log_p)) }
-}
+// pub fn signrank_quantile(p: f64, n: f64, lower_tail: bool, log_p: bool) -> f64 {
+//     unsafe { ffi::qsignrank(p, n, c_bool(lower_tail), c_bool(log_p)) }
+// }
 
 // TODO maybe r* functions (you can get their behaviour from the `rand` family
 // of crates though). Also some general math functions like the beta/gamma functions, and others.
